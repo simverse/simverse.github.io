@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google TTS 음성 샘플 (모바일)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .selector {
+            margin-bottom: 15px;
+        }
+        .selector label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .selector select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            font-size: 1em;
+            -webkit-appearance: none; /* for iOS */
+            appearance: none;
+        }
+        .play-button {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .play-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google 한국어 TTS 음성 샘플</h1>
+
+        <div class="selector">
+            <label for="gender-select">1. 성별 선택:</label>
+            <select id="gender-select">
+                <option value="">-- 성별 --</option>
+            </select>
+        </div>
+
+        <div class="selector">
+            <label for="characteristic-select">2. 특징 선택:</label>
+            <select id="characteristic-select" disabled>
+                <option value="">-- 특징 --</option>
+            </select>
+        </div>
+
+        <div class="selector">
+            <label for="voice-select">3. 성우 선택:</label>
+            <select id="voice-select" disabled>
+                <option value="">-- 성우 --</option>
+            </select>
+        </div>
+
+        <button id="play-btn" class="play-button" disabled>재생</button>
+        <audio id="audio-player" style="display: none;"></audio>
+    </div>
+
+    <script>
+        const voiceData = [
+            { name: "ko-KR-Chirp3-HD-Achernar", gender: "여성", characteristic: "Soft" },
+            { name: "ko-KR-Chirp3-HD-Achird", gender: "남성", characteristic: "Friendly" },
+            { name: "ko-KR-Chirp3-HD-Algenib", gender: "남성", characteristic: "Gravelly" },
+            { name: "ko-KR-Chirp3-HD-Algieba", gender: "남성", characteristic: "Smooth" },
+            { name: "ko-KR-Chirp3-HD-Alnilam", gender: "남성", characteristic: "Firm" },
+            { name: "ko-KR-Chirp3-HD-Aoede", gender: "여성", characteristic: "Breezy" },
+            { name: "ko-KR-Chirp3-HD-Autonoe", gender: "여성", characteristic: "Bright" },
+            { name: "ko-KR-Chirp3-HD-Callirrhoe", gender: "여성", characteristic: "Easy-going" },
+            { name: "ko-KR-Chirp3-HD-Charon", gender: "남성", characteristic: "Informative" },
+            { name: "ko-KR-Chirp3-HD-Despina", gender: "여성", characteristic: "Smooth" },
+            { name: "ko-KR-Chirp3-HD-Enceladus", gender: "남성", characteristic: "Breathy" },
+            { name: "ko-KR-Chirp3-HD-Erinome", gender: "여성", characteristic: "Clear" },
+            { name: "ko-KR-Chirp3-HD-Fenrir", gender: "남성", characteristic: "Excitable" },
+            { name: "ko-KR-Chirp3-HD-Gacrux", gender: "여성", characteristic: "Mature" },
+            { name: "ko-KR-Chirp3-HD-Iapetus", gender: "남성", characteristic: "Clear" },
+            { name: "ko-KR-Chirp3-HD-Kore", gender: "여성", characteristic: "Firm" },
+            { name: "ko-KR-Chirp3-HD-Laomedeia", gender: "여성", characteristic: "Upbeat" },
+            { name: "ko-KR-Chirp3-HD-Leda", gender: "여성", characteristic: "Youthful" },
+            { name: "ko-KR-Chirp3-HD-Orus", gender: "남성", characteristic: "Firm" },
+            { name: "ko-KR-Chirp3-HD-Puck", gender: "남성", characteristic: "Upbeat" },
+            { name: "ko-KR-Chirp3-HD-Pulcherrima", gender: "여성", characteristic: "Forward" },
+            { name: "ko-KR-Chirp3-HD-Rasalgethi", gender: "남성", characteristic: "Informative" },
+            { name: "ko-KR-Chirp3-HD-Sadachbia", gender: "남성", characteristic: "Lively" },
+            { name: "ko-KR-Chirp3-HD-Sadaltager", gender: "남성", characteristic: "Knowledgeable" },
+            { name: "ko-KR-Chirp3-HD-Schedar", gender: "남성", characteristic: "Even" },
+            { name: "ko-KR-Chirp3-HD-Sulafat", gender: "여성", characteristic: "Warm" },
+            { name: "ko-KR-Chirp3-HD-Umbriel", gender: "남성", characteristic: "Easy-going" },
+            { name: "ko-KR-Chirp3-HD-Vindemiatrix", gender: "여성", characteristic: "Gentle" },
+            { name: "ko-KR-Chirp3-HD-Zephyr", gender: "여성", characteristic: "Bright" },
+            { name: "ko-KR-Chirp3-HD-Zubenelgenubi", gender: "남성", characteristic: "Casual" },
+            { name: "ko-KR-Neural2-A", gender: "여성", characteristic: "-" },
+            { name: "ko-KR-Neural2-B", gender: "여성", characteristic: "-" },
+            { name: "ko-KR-Neural2-C", gender: "남성", characteristic: "-" },
+            { name: "ko-KR-Standard-A", gender: "여성", characteristic: "-" },
+            { name: "ko-KR-Standard-B", gender: "여성", characteristic: "-" },
+            { name: "ko-KR-Standard-C", gender: "남성", characteristic: "-" },
+            { name: "ko-KR-Standard-D", gender: "남성", characteristic: "-" },
+            { name: "ko-KR-Wavenet-A", gender: "여성", characteristic: "-" },
+            { name: "ko-KR-Wavenet-B", gender: "여성", characteristic: "-" },
+            { name: "ko-KR-Wavenet-C", gender: "남성", characteristic: "-" },
+            { name: "ko-KR-Wavenet-D", gender: "남성", characteristic: "-" }
+        ];
+
+        const genderSelect = document.getElementById('gender-select');
+        const characteristicSelect = document.getElementById('characteristic-select');
+        const voiceSelect = document.getElementById('voice-select');
+        const playBtn = document.getElementById('play-btn');
+        const audioPlayer = document.getElementById('audio-player');
+
+        function formatVoiceName(voiceName) {
+            if (voiceName.includes('Chirp3-HD')) return voiceName.split('-').pop();
+            return voiceName.replace('ko-KR-', '');
+        }
+
+        function populateGenders() {
+            const genders = [...new Set(voiceData.map(v => v.gender))];
+            genders.forEach(gender => {
+                const option = new Option(gender, gender);
+                genderSelect.add(option);
+            });
+        }
+
+        function updateCharacteristics() {
+            const selectedGender = genderSelect.value;
+            characteristicSelect.innerHTML = '<option value="">-- 특징 --</option>';
+            characteristicSelect.disabled = true;
+            voiceSelect.innerHTML = '<option value="">-- 성우 --</option>';
+            voiceSelect.disabled = true;
+            playBtn.disabled = true;
+
+            if (selectedGender) {
+                const characteristics = [...new Set(voiceData
+                    .filter(v => v.gender === selectedGender)
+                    .map(v => v.characteristic)
+                )];
+                characteristics.forEach(char => {
+                    const option = new Option(char, char);
+                    characteristicSelect.add(option);
+                });
+                characteristicSelect.disabled = false;
+            }
+        }
+
+        function updateVoices() {
+            const selectedGender = genderSelect.value;
+            const selectedCharacteristic = characteristicSelect.value;
+            voiceSelect.innerHTML = '<option value="">-- 성우 --</option>';
+            voiceSelect.disabled = true;
+            playBtn.disabled = true;
+
+            if (selectedGender && selectedCharacteristic) {
+                const voices = voiceData.filter(v => 
+                    v.gender === selectedGender && v.characteristic === selectedCharacteristic
+                );
+                voices.forEach(voice => {
+                    const option = new Option(formatVoiceName(voice.name), voice.name);
+                    voiceSelect.add(option);
+                });
+                voiceSelect.disabled = false;
+            }
+        }
+        
+        function checkPlayButton() {
+            playBtn.disabled = !voiceSelect.value;
+        }
+
+        function playVoice() {
+            const selectedVoiceName = voiceSelect.value;
+            if (!selectedVoiceName) return;
+
+            const originalIndex = voiceData.findIndex(v => v.name === selectedVoiceName);
+            audioPlayer.src = `audio/voice_${originalIndex + 1}.mp3`;
+            audioPlayer.play();
+        }
+
+        // Initial Population
+        populateGenders();
+
+        // Event Listeners
+        genderSelect.addEventListener('change', updateCharacteristics);
+        characteristicSelect.addEventListener('change', updateVoices);
+        voiceSelect.addEventListener('change', checkPlayButton);
+        playBtn.addEventListener('click', playVoice);
+
+    </script>
+</body>
+</html>

@@ -12,193 +12,197 @@
         h1 {
             text-align: center;
         }
-        .voice-list {
-            list-style: none;
-            padding: 0;
-        }
-        .voice-item {
+        .filters {
             display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
             align-items: center;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
-        .voice-name {
-            flex-grow: 1;
+        .filters label {
+            font-weight: bold;
+        }
+        .filters select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
         audio {
-            width: 250px;
+            width: 100%;
+            max-width: 300px;
         }
     </style>
 </head>
 <body>
     <h1>Google TTS 한국어 음성 샘플 (41종)</h1>
-    <ul class="voice-list">
-        <li class="voice-item">
-            <span class="voice-name">1/41 번째 음성: ko-KR-Chirp3-HD-Achernar (FEMALE)</span>
-            <audio controls src="audio/voice_1.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">2/41 번째 음성: ko-KR-Chirp3-HD-Achird (MALE)</span>
-            <audio controls src="audio/voice_2.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">3/41 번째 음성: ko-KR-Chirp3-HD-Algenib (MALE)</span>
-            <audio controls src="audio/voice_3.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">4/41 번째 음성: ko-KR-Chirp3-HD-Algieba (MALE)</span>
-            <audio controls src="audio/voice_4.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">5/41 번째 음성: ko-KR-Chirp3-HD-Alnilam (MALE)</span>
-            <audio controls src="audio/voice_5.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">6/41 번째 음성: ko-KR-Chirp3-HD-Aoede (FEMALE)</span>
-            <audio controls src="audio/voice_6.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">7/41 번째 음성: ko-KR-Chirp3-HD-Autonoe (FEMALE)</span>
-            <audio controls src="audio/voice_7.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">8/41 번째 음성: ko-KR-Chirp3-HD-Callirrhoe (FEMALE)</span>
-            <audio controls src="audio/voice_8.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">9/41 번째 음성: ko-KR-Chirp3-HD-Charon (MALE)</span>
-            <audio controls src="audio/voice_9.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">10/41 번째 음성: ko-KR-Chirp3-HD-Despina (FEMALE)</span>
-            <audio controls src="audio/voice_10.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">11/41 번째 음성: ko-KR-Chirp3-HD-Enceladus (MALE)</span>
-            <audio controls src="audio/voice_11.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">12/41 번째 음성: ko-KR-Chirp3-HD-Erinome (FEMALE)</span>
-            <audio controls src="audio/voice_12.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">13/41 번째 음성: ko-KR-Chirp3-HD-Fenrir (MALE)</span>
-            <audio controls src="audio/voice_13.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">14/41 번째 음성: ko-KR-Chirp3-HD-Gacrux (FEMALE)</span>
-            <audio controls src="audio/voice_14.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">15/41 번째 음성: ko-KR-Chirp3-HD-Iapetus (MALE)</span>
-            <audio controls src="audio/voice_15.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">16/41 번째 음성: ko-KR-Chirp3-HD-Kore (FEMALE)</span>
-            <audio controls src="audio/voice_16.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">17/41 번째 음성: ko-KR-Chirp3-HD-Laomedeia (FEMALE)</span>
-            <audio controls src="audio/voice_17.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">18/41 번째 음성: ko-KR-Chirp3-HD-Leda (FEMALE)</span>
-            <audio controls src="audio/voice_18.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">19/41 번째 음성: ko-KR-Chirp3-HD-Orus (MALE)</span>
-            <audio controls src="audio/voice_19.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">20/41 번째 음성: ko-KR-Chirp3-HD-Puck (MALE)</span>
-            <audio controls src="audio/voice_20.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">21/41 번째 음성: ko-KR-Chirp3-HD-Pulcherrima (FEMALE)</span>
-            <audio controls src="audio/voice_21.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">22/41 번째 음성: ko-KR-Chirp3-HD-Rasalgethi (MALE)</span>
-            <audio controls src="audio/voice_22.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">23/41 번째 음성: ko-KR-Chirp3-HD-Sadachbia (MALE)</span>
-            <audio controls src="audio/voice_23.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">24/41 번째 음성: ko-KR-Chirp3-HD-Sadaltager (MALE)</span>
-            <audio controls src="audio/voice_24.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">25/41 번째 음성: ko-KR-Chirp3-HD-Schedar (MALE)</span>
-            <audio controls src="audio/voice_25.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">26/41 번째 음성: ko-KR-Chirp3-HD-Sulafat (FEMALE)</span>
-            <audio controls src="audio/voice_26.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">27/41 번째 음성: ko-KR-Chirp3-HD-Umbriel (MALE)</span>
-            <audio controls src="audio/voice_27.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">28/41 번째 음성: ko-KR-Chirp3-HD-Vindemiatrix (FEMALE)</span>
-            <audio controls src="audio/voice_28.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">29/41 번째 음성: ko-KR-Chirp3-HD-Zephyr (FEMALE)</span>
-            <audio controls src="audio/voice_29.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">30/41 번째 음성: ko-KR-Chirp3-HD-Zubenelgenubi (MALE)</span>
-            <audio controls src="audio/voice_30.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">31/41 번째 음성: ko-KR-Neural2-A (FEMALE)</span>
-            <audio controls src="audio/voice_31.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">32/41 번째 음성: ko-KR-Neural2-B (FEMALE)</span>
-            <audio controls src="audio/voice_32.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">33/41 번째 음성: ko-KR-Neural2-C (MALE)</span>
-            <audio controls src="audio/voice_33.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">34/41 번째 음성: ko-KR-Standard-A (FEMALE)</span>
-            <audio controls src="audio/voice_34.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">35/41 번째 음성: ko-KR-Standard-B (FEMALE)</span>
-            <audio controls src="audio/voice_35.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">36/41 번째 음성: ko-KR-Standard-C (MALE)</span>
-            <audio controls src="audio/voice_36.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">37/41 번째 음성: ko-KR-Standard-D (MALE)</span>
-            <audio controls src="audio/voice_37.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">38/41 번째 음성: ko-KR-Wavenet-A (FEMALE)</span>
-            <audio controls src="audio/voice_38.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">39/41 번째 음성: ko-KR-Wavenet-B (FEMALE)</span>
-            <audio controls src="audio/voice_39.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">40/41 번째 음성: ko-KR-Wavenet-C (MALE)</span>
-            <audio controls src="audio/voice_40.mp3"></audio>
-        </li>
-        <li class="voice-item">
-            <span class="voice-name">41/41 번째 음성: ko-KR-Wavenet-D (MALE)</span>
-            <audio controls src="audio/voice_41.mp3"></audio>
-        </li>
-    </ul>
+
+    <div class="filters">
+        <div>
+            <label for="gender-filter">성별:</label>
+            <select id="gender-filter"></select>
+        </div>
+        <div>
+            <label for="characteristic-filter">특징 (개성):</label>
+            <select id="characteristic-filter"></select>
+        </div>
+    </div>
+
+    <table id="voice-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>성우 이름</th>
+                <th>성별</th>
+                <th>기술</th>
+                <th>특징 (기술)</th>
+                <th>특징 (개성)</th>
+                <th>오디오 샘플</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Voice data will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        const voiceData = [
+            { name: "ko-KR-Chirp3-HD-Achernar", gender: "여성", characteristic: "Soft" },
+            { name: "ko-KR-Chirp3-HD-Achird", gender: "남성", characteristic: "Friendly" },
+            { name: "ko-KR-Chirp3-HD-Algenib", gender: "남성", characteristic: "Gravelly" },
+            { name: "ko-KR-Chirp3-HD-Algieba", gender: "남성", characteristic: "Smooth" },
+            { name: "ko-KR-Chirp3-HD-Alnilam", gender: "남성", characteristic: "Firm" },
+            { name: "ko-KR-Chirp3-HD-Aoede", gender: "여성", characteristic: "Breezy" },
+            { name: "ko-KR-Chirp3-HD-Autonoe", gender: "여성", characteristic: "Bright" },
+            { name: "ko-KR-Chirp3-HD-Callirrhoe", gender: "여성", characteristic: "Easy-going" },
+            { name: "ko-KR-Chirp3-HD-Charon", gender: "남성", characteristic: "Informative" },
+            { name: "ko-KR-Chirp3-HD-Despina", gender: "여성", characteristic: "Smooth" },
+            { name: "ko-KR-Chirp3-HD-Enceladus", gender: "남성", characteristic: "Breathy" },
+            { name: "ko-KR-Chirp3-HD-Erinome", gender: "여성", characteristic: "Clear" },
+            { name: "ko-KR-Chirp3-HD-Fenrir", gender: "남성", characteristic: "Excitable" },
+            { name: "ko-KR-Chirp3-HD-Gacrux", gender: "여성", characteristic: "Mature" },
+            { name: "ko-KR-Chirp3-HD-Iapetus", gender: "남성", characteristic: "Clear" },
+            { name: "ko-KR-Chirp3-HD-Kore", gender: "여성", characteristic: "Firm" },
+            { name: "ko-KR-Chirp3-HD-Laomedeia", gender: "여성", characteristic: "Upbeat" },
+            { name: "ko-KR-Chirp3-HD-Leda", gender: "여성", characteristic: "Youthful" },
+            { name: "ko-KR-Chirp3-HD-Orus", gender: "남성", characteristic: "Firm" },
+            { name: "ko-KR-Chirp3-HD-Puck", gender: "남성", characteristic: "Upbeat" },
+            { name: "ko-KR-Chirp3-HD-Pulcherrima", gender: "여성", characteristic: "Forward" },
+            { name: "ko-KR-Chirp3-HD-Rasalgethi", gender: "남성", characteristic: "Informative" },
+            { name: "ko-KR-Chirp3-HD-Sadachbia", gender: "남성", characteristic: "Lively" },
+            { name: "ko-KR-Chirp3-HD-Sadaltager", gender: "남성", characteristic: "Knowledgeable" },
+            { name: "ko-KR-Chirp3-HD-Schedar", gender: "남성", characteristic: "Even" },
+            { name: "ko-KR-Chirp3-HD-Sulafat", gender: "여성", characteristic: "Warm" },
+            { name: "ko-KR-Chirp3-HD-Umbriel", gender: "남성", characteristic: "Easy-going" },
+            { name: "ko-KR-Chirp3-HD-Vindemiatrix", gender: "여성", characteristic: "Gentle" },
+            { name: "ko-KR-Chirp3-HD-Zephyr", gender: "여성", characteristic: "Bright" },
+            { name: "ko-KR-Chirp3-HD-Zubenelgenubi", gender: "남성", characteristic: "Casual" },
+            { name: "ko-KR-Neural2-A", gender: "여성" },
+            { name: "ko-KR-Neural2-B", gender: "여성" },
+            { name: "ko-KR-Neural2-C", gender: "남성" },
+            { name: "ko-KR-Standard-A", gender: "여성" },
+            { name: "ko-KR-Standard-B", gender: "여성" },
+            { name: "ko-KR-Standard-C", gender: "남성" },
+            { name: "ko-KR-Standard-D", gender: "남성" },
+            { name: "ko-KR-Wavenet-A", gender: "여성" },
+            { name: "ko-KR-Wavenet-B", gender: "여성" },
+            { name: "ko-KR-Wavenet-C", gender: "남성" },
+            { name: "ko-KR-Wavenet-D", gender: "남성" }
+        ];
+
+        const genderFilter = document.getElementById('gender-filter');
+        const characteristicFilter = document.getElementById('characteristic-filter');
+        const tableBody = document.querySelector('#voice-table tbody');
+
+        function getTechnologyInfo(voiceName) {
+            if (voiceName.includes('Chirp3-HD')) return { tech: 'Chirp3-HD', description: 'Google의 최신 고품질 음성 모델입니다.' };
+            if (voiceName.includes('Neural2')) return { tech: 'Neural2', description: 'Tacotron 2를 기반으로 한 신경망 음성 모델입니다.' };
+            if (voiceName.includes('Wavenet')) return { tech: 'WaveNet', description: 'DeepMind에서 개발한 생성 모델로, 자연스러운 음성을 생성합니다.' };
+            if (voiceName.includes('Standard')) return { tech: 'Standard', description: '전통적인 파라메트릭 TTS 모델입니다.' };
+            return { tech: '알 수 없음', description: '-' };
+        }
+
+        function formatVoiceName(voiceName) {
+            if (voiceName.includes('Chirp3-HD')) {
+                return voiceName.split('-').pop();
+            }
+            return voiceName.replace('ko-KR-', '');
+        }
+
+        function populateFilters() {
+            const genders = ['전체', ...new Set(voiceData.map(v => v.gender))];
+            const characteristics = ['전체', ...new Set(voiceData.map(v => v.characteristic).filter(Boolean))];
+
+            genders.forEach(gender => {
+                const option = document.createElement('option');
+                option.value = gender;
+                option.textContent = gender;
+                genderFilter.appendChild(option);
+            });
+
+            characteristics.forEach(char => {
+                const option = document.createElement('option');
+                option.value = char;
+                option.textContent = char;
+                characteristicFilter.appendChild(option);
+            });
+        }
+
+        function applyFilters() {
+            const selectedGender = genderFilter.value;
+            const selectedCharacteristic = characteristicFilter.value;
+
+            const filteredVoices = voiceData.filter(voice => {
+                const genderMatch = (selectedGender === '전체') || (voice.gender === selectedGender);
+                const characteristicMatch = (selectedCharacteristic === '전체') || (voice.characteristic === selectedCharacteristic);
+                return genderMatch && characteristicMatch;
+            });
+
+            renderTable(filteredVoices);
+        }
+
+        function renderTable(voices) {
+            tableBody.innerHTML = ''; // Clear existing rows
+            voices.forEach((voice) => {
+                const techInfo = getTechnologyInfo(voice.name);
+                const originalIndex = voiceData.findIndex(v => v.name === voice.name);
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td>${originalIndex + 1}</td>
+                    <td>${formatVoiceName(voice.name)}</td>
+                    <td>${voice.gender}</td>
+                    <td>${techInfo.tech}</td>
+                    <td>${techInfo.description}</td>
+                    <td>${voice.characteristic || '-'}</td>
+                    <td><audio controls src="audio/voice_${originalIndex + 1}.mp3"></audio></td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Initial setup
+        populateFilters();
+        applyFilters();
+
+        genderFilter.addEventListener('change', applyFilters);
+        characteristicFilter.addEventListener('change', applyFilters);
+    </script>
 </body>
 </html>
