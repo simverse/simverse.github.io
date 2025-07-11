@@ -1,6 +1,11 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+---
+title: "구글 요금제 및 Gemini 이용 방안"
+layout: category
+permalink: /categories/project/
+taxonomy: Project
+---
 
-# 2025년 구글 전체 요금제 및 Gemini API 활용 가이드
+# 구글 요금제 및 Gemini 이용 방안
 
 구글의 주요 서비스별 요금제와 Gemini AI, Gemini CLI 활용 방안, 그리고 각 요금제의 상관 관계를 한눈에 볼 수 있게 정리했습니다.
 

@@ -1,0 +1,9 @@
+main:
+  - title: "Project"
+    url: /categories/project/
+  - title: "Area"
+    url: /categories/area/
+  - title: "Resource"
+    url: /categories/Resource/     
+  - title: "Archive"
+    url: /categories/Archive/
