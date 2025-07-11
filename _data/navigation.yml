@@ -10,3 +10,15 @@ main:
     url: /categories/Resource/     
   - title: "Archive"
     url: /categories/Archive/
+
+sidebar-category:
+  - title: "📁 Project"
+    children:
+      - title: "A 프로젝트"
+        url: /categories/project/2025-07-27_offline-study/
+  - title: "Area"
+    url: /categories/area/
+  - title: "Resource"
+    url: /categories/Resource/     
+  - title: "Archive"
+    url: /categories/Archive/

@@ -1,8 +1,10 @@
 ---
 title: "구글 요금제 및 Gemini 이용 방안"
-layout: category
-permalink: /categories/project/
-taxonomy: Project
+date: 2025-07-27
+categories: [Project]
+tags: [Gemini, Google, API, 요금제]
+author_profile: true
+read_time: true
 ---
 
 # 구글 요금제 및 Gemini 이용 방안

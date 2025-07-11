@@ -1,8 +1,18 @@
 remote_theme           : "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-include-cache
+  - jekyll-archives
 locale                 : "ko-KR"
 search                 : true # true, false (default)
+
+# 카테고리 설정
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
 # Site Author
 author:
   links:
