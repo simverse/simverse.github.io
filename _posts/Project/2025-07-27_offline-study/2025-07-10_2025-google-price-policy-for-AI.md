@@ -1,8 +1,9 @@
 ---
 layout : post
-title: "2025 구글 요금제 및 Gemini 이용 방안"
+title: "구글 요금제 및 Gemini 이용 방안"
 date: 2025-07-10
-categories: [Project,2025-07-27_data-factory-seroul_Gemini-cli_study]
+categories: [Project, 2025-07-27_offline-study]
+tags : [AI, gemini]
 ---
 
 # 구글 요금제 및 Gemini 이용 방안

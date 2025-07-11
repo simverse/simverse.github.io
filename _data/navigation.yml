@@ -3,9 +3,7 @@ main:
     url: /categories/project/
     children:
       - title: "20250727_Gemini CLI_스터디 발표"
-        url: /categories/project/20250727_Gemini CLI_스터디 발표/
-      - title: "20250718_가상화폐 선물 실시간 트레이딩 시스템 구축"
-        url: /categories/project/20250718_가상화폐 선물 실시간 트레이딩 시스템 구축/
+        url: /categories/project/2025-07-27_offline-study/
   - title: "Area"
     url: /categories/area/
   - title: "Resource"
