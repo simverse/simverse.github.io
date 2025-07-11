@@ -1,5 +1,5 @@
 main:
-  - title: "Project"
+  - title: "📁 Project"
     url: /categories/Project/
     children:
       - title: "20250727_Gemini CLI_스터디 발표"
