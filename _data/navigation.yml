@@ -10,7 +10,6 @@ main:
     url: /categories/Resource/     
   - title: "Archive"
     url: /categories/Archive/
-
 sidebar-category:
   - title: "📁 Project"
     children:
