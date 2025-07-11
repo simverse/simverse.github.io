@@ -13,10 +13,10 @@ main:
 sidebar-category:
   - title: "📁 Project"
     children:
-      - title: "A 프로젝트"
+      - title: "20250727_Gemini CLI_스터디 발표"
         url: /categories/Project/2025-07-27_offline-study/
   - title: "Area"
-    url: /categories/area/
+    url: /categories/Area/
   - title: "Resource"
     url: /categories/Resource/     
   - title: "Archive"
