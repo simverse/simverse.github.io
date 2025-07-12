@@ -17,11 +17,11 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      # author_profile: true
+      # read_time: true
+      # comments: true
+      # share: true
+      # related: true
       sidebar:
         nav: "sidebar-category"   # ← 이 부분이 핵심!      
   # _pages
