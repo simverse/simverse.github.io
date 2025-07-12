@@ -25,10 +25,10 @@ defaults:
       sidebar:
         nav: "sidebar-category"   # ← 이 부분이 핵심!      
   # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      sidebar:
-        nav: "sidebar-category"
+  # - scope:
+  #     path: ""
+  #     type: pages
+  #   values:
+  #     layout: single
+  #     sidebar:
+  #       nav: "sidebar-category"

@@ -3,7 +3,6 @@ layout : post
 title: "구글 요금제 및 Gemini 이용 방안"
 date: 2025-07-10
 categories: [Project, 2025-07-27_offline-study]
-tags : [AI, gemini]
 ---
 
 # 구글 요금제 및 Gemini 이용 방안
