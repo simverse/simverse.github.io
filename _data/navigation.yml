@@ -1,9 +1,6 @@
 main:
-  - title: "📁 Project"
+  - title: "Project"
     url: /categories/Project/
-    children:
-      - title: "20250727_Gemini CLI_스터디 발표"
-        url: /categories/Project/2025-07-27_offline-study/
   - title: "Area"
     url: /categories/area/
   - title: "Resource"
@@ -11,7 +8,7 @@ main:
   - title: "Archive"
     url: /categories/Archive/
 sidebar-category:
-  - title: "📁 Project"
+  - title: "Project"
     children:
       - title: "20250727_Gemini CLI_스터디 발표"
         url: /categories/Project/2025-07-27_offline-study/
