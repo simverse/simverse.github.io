@@ -1,5 +1,29 @@
-<!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
+<!-- Mermaid.js 로드 -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    mermaid.initialize({
+      theme: 'default',
+      startOnLoad: true,
+      securityLevel: 'loose',
+      flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+      }
+    });
+    
+    // Mermaid 코드 블록을 찾아서 렌더링
+    var mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+    mermaidBlocks.forEach(function(block) {
+      var parent = block.parentElement;
+      var diagram = block.textContent;
+      var wrapper = document.createElement('div');
+      wrapper.className = 'mermaid';
+      wrapper.textContent = diagram;
+      parent.parentElement.replaceChild(wrapper, parent);
+    });
+    
+    // Mermaid 렌더링 실행
+    mermaid.init();
+  });
+</script>

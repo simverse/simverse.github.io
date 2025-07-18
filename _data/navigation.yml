@@ -1,12 +1,24 @@
-# main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Posts"
+    url: /posts/
+  - title: "Tags"
+    url: /tags/
+  - title: "About"
+    url: /about/
+sidebar-category:
+  - title: "Project"
+    url: /categories/Project/
+    children:
+      - title: "20250727-Gemini CLI 스터디 발표"
+        url: /categories/Project/2025-07-27-offline-study/
+      - title: "20250731_가상화폐_선물거래_투자시스템"
+        url: /categories/Project/2025-07-31-crypto-trading-system/
+  - title: "Area"
+    url: /categories/Area/
+    children:
+      - title: "PARA Memo"
+        url: /categories/Area/PARA/
+  - title: "Resource"
+    url: /categories/Resource/
+  - title: "Archive"
+    url: /categories/Archive/    

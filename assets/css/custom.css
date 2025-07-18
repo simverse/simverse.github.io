@@ -1,0 +1,22 @@
+/* Mermaid 그래프 스타일링 */
+.mermaid {
+  text-align: center;
+  margin: 1em 0;
+  background: #f8f9fa;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mermaid 코드 블록 스타일링 */
+pre code.language-mermaid {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+ 
