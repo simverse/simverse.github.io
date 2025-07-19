@@ -1,23 +1,24 @@
 ---
 title: "jekyll 기반 블로그에 댓글 기능 적용하기"
 layout: category
-permalink: /categories/Area/PARA/
-taxonomy: PARA
+categories: [Area,PARA]
 parent: Area
+comments: true
+classes: wide
 tags:
-  - PARA  
   - jekyll
   - Minimal Mistakes
   - comment
   - Giscus
   - GitHub Discussions
-classes: wide
 date: 2025-07-17 22:00:00 +0900
 last_modified_at: 2025-07-17 23:00:00 +0900
-comments : true
+sidebar:
+  nav: "sidebar-category"
 ---
 
-**Jekyll(Minimal Mistakes) 블로그에서 포스팅된 글에 댓글(Comment)을 관리하는 가장 간단한 방법**을 안내드리겠습니다.
+
+**Jekyll(Minimal Mistakes) 블로그에서 포스팅된 글에 댓글(Comment)을 관리하는 간단한 방법**을 안내드리겠습니다.
 
 ---
 
@@ -82,8 +83,9 @@ comments:
 
 #### 5) giscus 댓글 기능은 Local 실행시 안나오며, github.io에 올린 버전만 정상 동작됨. 
 로컬버전
-![로컬버전](/assets/images/Area/PARA/giscus_local.png)
-
+![로컬버전](/assets/images/Area/PARA/giscus_local.png) <br>
+ 서버버전
+![서버버전](/assets/images/Area/PARA/success-giscus.png)
 
 
 
