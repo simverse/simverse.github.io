@@ -18,6 +18,8 @@ sidebar-category:
     children:
       - title: "PARA Memo"
         url: /categories/Area/PARA/
+      - title: "Crypto"
+        url: /categories/Area/Crypto/
   - title: "Resource"
     url: /categories/Resource/
   - title: "Archive"
